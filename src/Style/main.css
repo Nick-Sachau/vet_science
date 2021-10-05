@@ -1,10 +1,10 @@
 footer {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 .navbar {
-  width: 190px;
+  width: 210px;
   height: 100vh;
   background: #333333;
   display: flex;
@@ -23,7 +23,7 @@ footer {
   justify-content: center;
 }
 .navbar .logo img {
-  width: 90%;
+  transform: scale(0.25);
 }
 .navbar .links {
   width: 100%;
@@ -54,6 +54,9 @@ footer {
 .navbar .links a:hover {
   background: #f7951d;
   color: #333333;
+}
+.navbar .links a.active:hover::before {
+  background: #333333;
 }
 .navbar .links a.active::before {
   content: "";
@@ -94,45 +97,104 @@ footer {
   text-decoration: none;
   color: #e6b31a;
 }
+.navbar .login .link p:hover {
+  cursor: pointer;
+  color: #f7951d;
+  transform: scale(1.2);
+}
+.navbar .login .link p svg {
+  vertical-align: text-bottom;
+}
 
+.loginMenu {
+  transition: 0.8s all;
+  color: #e6e6e6;
+  width: 43vw;
+  height: 90vh;
+  border-radius: 50px;
+  position: absolute;
+  left: 32vw;
+  top: 5%;
+  z-index: 1000;
+  background: rgba(4, 20, 62, 0.9);
+}
+.loginMenu .exit {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  font-size: 2rem;
+}
+.loginMenu .exit:hover {
+  color: #cc3333;
+}
+.loginMenu .title {
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .loginMenu {
+    color: #e6e6e6;
+    width: 65vw;
+    height: 90vh;
+    border-radius: 50px;
+    position: absolute;
+    left: 20vw;
+    top: 5%;
+    z-index: 1000;
+    background: rgba(4, 20, 62, 0.9);
+  }
+  .loginMenu .invDiv {
+    position: absolute;
+    top: -5.5%;
+    left: -60%;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+  }
+  .loginMenu .title {
+    text-align: center;
+    width: 100%;
+  }
+}
 .about {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 .events {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 .contact {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 .donate {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 .error {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 2195px;
 }
 
 .home {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 .pets {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 .students {
   width: 90vw;
-  margin-left: 195px;
+  margin-left: 215px;
 }
 
 body {

@@ -1,5 +1,9 @@
-import React, { useReducer, useContext, useEffect } from 'react'
+import React, { useReducer, useContext } from 'react'
 import { reducer } from './useReducer'
+
+let href = window.location.href.split('/')
+href = href[3]
+console.log(href)
 
 const defaultState = {
     loading: false,
@@ -7,7 +11,9 @@ const defaultState = {
     page: 0,
     thme: 'light',
     query: '',
-    activePage: 'home',
+    activePage: href === '' ? 'home' : href,
+    login: false,
+    signUp: false,
 }
 
 const AppContext = React.createContext()
@@ -27,6 +33,9 @@ export const AppProvider = ({ children }) => {
                 break;
             case 'signUp':
                 dispatch({ type: 'SET_SIGNUP' })
+                break;
+            default : 
+                dispatch({ type: 'CLOSE_USER' })
                 break;
         }
     }

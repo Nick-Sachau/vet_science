@@ -1,0 +1,62 @@
+@use '../theme' as *;
+
+
+.loginMenu {
+    transition: .8s all;
+    color: $clr-login-text;
+    width: 43vw;
+    height: 90vh;
+    border-radius: 50px;
+    position: absolute;
+    left: 32vw;
+    top: 5%;
+    z-index: 1000;
+    background: $clr-login-background;
+
+    .exit {
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        font-size: 2rem;
+
+        &:hover {
+            color: $clr-login-exit-hover;
+        }
+    }
+
+    .title {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+// smaller then desktop
+
+@media only screen and (max-width: 1200px) {
+    .loginMenu {
+        color: $clr-login-text;
+        // width: 800px;
+        width: 65vw;
+        height: 90vh;
+        border-radius: 50px;
+        position: absolute;
+        left: 20vw;
+        top: 5%;
+        z-index: 1000;
+        background: $clr-login-background;
+
+        .invDiv {
+            position: absolute;
+            top: -5.5%;
+            left: -60%;
+            width: 100vw;
+            height: 100vh;
+            content: '';
+        }
+
+        .title {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

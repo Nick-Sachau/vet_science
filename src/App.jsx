@@ -1,9 +1,12 @@
-import { Navbar, Footer } from './Components';
+import { Navbar, Footer, Login } from './Components';
 import { Route, Switch } from 'react-router-dom'
-import { Home, Login } from './Pages'
+import { Home } from './Pages'
 import { links } from './Util/const'
+import { useGlobalContext } from './Util/context';
 
 function App() {
+  const { login, signUp } = useGlobalContext();
+
   return (
     <>
       <Navbar />
@@ -11,7 +14,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        {links.filter((link) => link.text != "Home").map((link) => {
+        {links.filter((link) => link.text !== "Home").map((link) => {
           const { id, url, page } = link;
           return(
             <Route key={id} path={url}>
@@ -19,10 +22,10 @@ function App() {
             </Route>
           )
         })}
-        <Route path="/login">
-          <Login />
-        </Route>
       </Switch>
+      {login && <Login type='login'/>}
+      {/* {signUp && <Login type='signup'/>} */}
+      {/* <Login type="login"/> */}
       <Footer />
     </>
   );
