@@ -1,6 +1,6 @@
 import { Navbar, Footer } from './Components';
 import { Route, Switch } from 'react-router-dom'
-import { Home } from './Pages'
+import { Home, Login } from './Pages'
 import { links } from './Util/const'
 
 function App() {
@@ -19,6 +19,9 @@ function App() {
             </Route>
           )
         })}
+        <Route path="/login">
+          <Login />
+        </Route>
       </Switch>
       <Footer />
     </>

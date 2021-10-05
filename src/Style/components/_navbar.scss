@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     
     .logo {
@@ -31,55 +31,84 @@
         flex-direction: column;
         justify-content: space-around;
 
-        .activeMark {
-            position: absolute;
-            width: 5px;
-            height: 4vh;
-            background: $clr-navbar-active;
-            margin: 0;
-
-            &.H {
-                top: 10.1vh;
-            }
-
-            &.E {
-                top: 14.1vh;
-            }
-
-            &.P {
-                top: 18.1vh;
-            }
-
-            &.S {
-                top: 22.1vh;
-            }
-
-            &.A {
-                top: 26.1vh;
-            }
-
-            &.C {
-                top: 30.1vh;
-            }
-
-            &.D {
-                top: 34.1vh;
-            }
-        }
-
         a {
-            height: 4vh;
+            height: 50px;
+            width: 70%;
             display: flex;
             align-items: center;
-            text-align: left;
             color: $clr-navbar-text;
             text-decoration: none;
-            justify-content: space-around;
+            justify-content: space-between;
+            padding: 0 15%;
             font-size: 1.2rem;
+            position: relative;
+
+            svg {
+                vertical-align: -10%;
+                transform: scale(1.5);
+            }
+
+            .text {
+                text-align: left;
+                width: 65%;
+            }
 
             &:hover {
                 background: $clr-navbar-background-hover;
                 color: $clr-navbar-text-hover;
+            }
+
+            &.active {
+
+
+                &::before {
+                    content: '';
+                    width: 7px;
+                    height: 80%;
+                    position: absolute;
+                    left: 0;
+                    background: $clr-navbar-active;
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+            }
+
+            
+            
+        }
+    }
+
+    .login {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+
+        .user {
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-around;
+
+            img {
+                border: 1px solid $clr-user-image-border;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+
+            .username {
+                color: $clr-navbar-text;
+                text-transform: capitalize;
+            }
+        }
+
+        .link {
+            display: flex;
+            justify-content: space-around;
+
+            p {
+                text-decoration: none;
+                color: $clr-navbar-text;
             }
         }
     }

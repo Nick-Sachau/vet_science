@@ -20,8 +20,19 @@ export const AppProvider = ({ children }) => {
         dispatch({ type: 'SET_PAGE', payload: newPage })
     }
 
+    const toggleLogin = (type) => {
+        switch(type) {
+            case 'login':
+                dispatch({ type: 'SET_LOGIN' })
+                break;
+            case 'signUp':
+                dispatch({ type: 'SET_SIGNUP' })
+                break;
+        }
+    }
+
     return (
-        <AppContext.Provider value={{ ...state, changePage }} >
+        <AppContext.Provider value={{ ...state, changePage, toggleLogin }} >
             { children }
         </AppContext.Provider>
     )

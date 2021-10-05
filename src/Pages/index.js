@@ -6,5 +6,6 @@ import Donate from "./Donate";
 import Pets from "./Pets";
 import Students from "./Students";
 import Error from './Error'
+import Login from "./Login";
 
-export { Home, About, Calander, Contact, Donate, Pets, Students, Error}
+export { Home, About, Calander, Contact, Donate, Pets, Students, Error, Login }

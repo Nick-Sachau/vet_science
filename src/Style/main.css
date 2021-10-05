@@ -10,7 +10,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
 }
 .navbar .logo {
@@ -31,47 +31,68 @@ footer {
   flex-direction: column;
   justify-content: space-around;
 }
-.navbar .links .activeMark {
-  position: absolute;
-  width: 5px;
-  height: 4vh;
-  background: #e6b31a;
-  margin: 0;
-}
-.navbar .links .activeMark.H {
-  top: 10.1vh;
-}
-.navbar .links .activeMark.E {
-  top: 14.1vh;
-}
-.navbar .links .activeMark.P {
-  top: 18.1vh;
-}
-.navbar .links .activeMark.S {
-  top: 22.1vh;
-}
-.navbar .links .activeMark.A {
-  top: 26.1vh;
-}
-.navbar .links .activeMark.C {
-  top: 30.1vh;
-}
-.navbar .links .activeMark.D {
-  top: 34.1vh;
-}
 .navbar .links a {
-  height: 4vh;
+  height: 50px;
+  width: 70%;
   display: flex;
   align-items: center;
-  text-align: left;
   color: #e6b31a;
   text-decoration: none;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 15%;
   font-size: 1.2rem;
+  position: relative;
+}
+.navbar .links a svg {
+  vertical-align: -10%;
+  transform: scale(1.5);
+}
+.navbar .links a .text {
+  text-align: left;
+  width: 65%;
 }
 .navbar .links a:hover {
   background: #f7951d;
   color: #333333;
+}
+.navbar .links a.active::before {
+  content: "";
+  width: 7px;
+  height: 80%;
+  position: absolute;
+  left: 0;
+  background: #e6b31a;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.navbar .login {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+.navbar .login .user {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-around;
+}
+.navbar .login .user img {
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.navbar .login .user .username {
+  color: #e6b31a;
+  text-transform: capitalize;
+}
+.navbar .login .link {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar .login .link p {
+  text-decoration: none;
+  color: #e6b31a;
 }
 
 .about {
