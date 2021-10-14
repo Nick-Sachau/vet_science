@@ -13,6 +13,7 @@ const defaultState = {
     query: '',
     activePage: href === '' ? 'home' : href,
     login: false,
+    adminUser: true,
     signUp: false,
 }
 

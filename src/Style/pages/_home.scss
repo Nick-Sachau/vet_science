@@ -1,4 +1,31 @@
 .home {
     width: 90vw;
     margin-left: 215px;
+
+    .title {
+        text-align: center;
+    }
+
+    .pets {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+
+        .pet {
+            width: 30%;
+            text-align: center;
+            border-radius: 20px;
+            margin: {
+                bottom: 10%;
+            }
+        }
+
+        img {
+            width: 75%;
+            height: 55%;
+            object-fit: cover;
+        }
+    }
 }

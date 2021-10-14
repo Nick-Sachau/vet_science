@@ -12,8 +12,20 @@ const Login = ({ type }) => {
             <div className='loginMenu'>
                 <BsXLg onClick={toggleLogin} className="exit"/>
                 <h1 className="title">Login</h1>
-                <IoPersonSharp />
-                <RiLock2Fill />
+                <div className="input">
+                    <div className="username">
+                        <IoPersonSharp className="icon"/>
+                        <input type="text" className='username' placeholder="Username" />
+                    </div>
+
+                    <div className="password">
+                        <RiLock2Fill className="icon"/>
+                        <input type="password" name="password" id="password" className='Password' placeholder="Password" />
+                    </div>
+                </div>
+                <div className="login">
+                    <input className="submit" type="submit" value="Login" />
+                </div>
             </div>
         )
     }

@@ -2,16 +2,102 @@
 
 
 .loginMenu {
-    transition: .8s all;
     color: $clr-login-text;
-    width: 43vw;
+    width: 38vw;
     height: 90vh;
-    border-radius: 50px;
+    // border-radius: 50px;
     position: absolute;
-    left: 32vw;
+    left: 36vw;
     top: 5%;
     z-index: 1000;
     background: $clr-login-background;
+
+    .input {
+        width: 70%;
+        margin: 0 auto;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+            
+        .username {
+            display: flex;
+            width: 100%;
+            height: 35%;
+            border: 1px solid $clr-orange;
+
+            input {
+                padding-left: 5%;
+                background: none;
+                outline: none;
+                border: {
+                    left: 1px solid $clr-orange;
+                    right: none;
+                    top: none;
+                    bottom: none;
+                }
+                color: $clr-orange;
+                height: 100%;
+                width: 100%;
+                font-size: 1.4rem;
+            }
+            
+            .icon {
+                height: 100%;
+                width: 20%;
+                transform: scale(.7);
+            }
+        }
+
+        .password {
+            display: flex;
+            width: 100%;
+            height: 35%;
+            border: 1px solid $clr-orange;
+
+            input {
+                padding-left: 5%;
+                background: none;
+                outline: none;
+                border: {
+                    left: 1px solid $clr-orange;
+                    right: none;
+                    top: none;
+                    bottom: none;
+                }
+                color: $clr-orange;
+                height: 100%;
+                width: 100%;
+                font-size: 1.4rem;
+            }
+
+            .icon {
+                height: 100%;
+                width: 20%;
+                transform: scale(.7);
+            }
+        }
+    }
+
+    .login {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+
+        .submit {
+            padding: 0;
+            width: 70%;
+            height: 100%;
+            border: 1px solid $clr-orange;
+            outline: none;
+            background: none;
+            font-size: 1.7rem;
+            color: $clr-orange;
+        }
+    }
+    
 
     .exit {
         position: absolute;
